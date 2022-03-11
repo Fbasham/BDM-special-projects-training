@@ -2,4 +2,6 @@
 used to test git skills
 
 
-Edit:  this edit is for the purpose of training
+Edit1:  this edit is for the purpose of training and is from the "feature" branch
+
+Edit2:  this is a second edit from "gh-pages" branch
