@@ -9,6 +9,9 @@
 <body>
     <header>
         <nav>
+            <a href="index.html">
+                <img src="./public/images/logo.png" alt="home">
+            </a>
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
@@ -17,7 +20,19 @@
         </nav>
     </header>
     <h1>Help</h1>
-    <main></main>
+    <main>
+        <fieldset>
+            <legend>Ask us</legend>
+            <form action="">
+                <label for="name">Name</label>
+                <input type="text" name="name" id="name">
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email">
+                <label for="question">Question</label>
+                <textarea name="question" id="question"></textarea>
+            </form>
+        </fieldset>
+    </main>
     <footer>&copy; 2022 Frank Basham</footer>
 </body>
 </html>
