@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');
+        body {
+            display: flex;
+            align-items: center;
+        }
+        .text {
+            padding-left: 10px;
+            font-family: 'Monoton', cursive;
+            font-size: 3rem;
+        }
+
+        .logo{
+            opacity: .6;
+        }
+
+        .sky {
+            z-index: 1;
+            height: 50px;
+            width: 100px;
+            background-color: skyblue;
+        }
+        .sun {
+            z-index: 2;
+            position: absolute;
+            top: 28px;
+            left: 28px;
+            height: 30px;
+            width: 60px;
+            border-top-left-radius: 60px;
+            border-top-right-radius: 60px;
+            background-color: gold;
+        }
+        .water {
+            z-index: 3;
+            width: 100px;
+            height: 30px;
+            background-color: turquoise;
+        }
+        .sand {
+            width: 100px;
+            height: 20px;
+            background-color: rgb(238, 212, 125);
+        }
+    
+    </style>
+</head>
+<body> 
+    <div class="logo">
+        <div class="sky"></div>
+        <div class="sun"></div>
+        <div class="water"></div>
+        <div class="sand"></div>
+    </div>
+    <div class="text">Das Beach</div>
+</body>
+</html>
+
