@@ -9,8 +9,6 @@
 body {
     background-color: #333;
     color: #fff;
-    /* width: 100vw; */
-    /* height: 100vh; */
 } 
 
 main {
@@ -75,6 +73,8 @@ h1 {
 
 table caption {
     font-weight: bold;
+    text-align: left;
+    margin-bottom: 1rem;
 }
 
 table {
@@ -82,10 +82,60 @@ table {
     border-collapse: collapse;
 }
 
+tr {
+    height: 2rem;
+    border-bottom: thin solid #111;
+}
+
+td,th {
+    padding: 5px;
+}
+
+thead tr{
+    height: 3rem;
+    text-align: left;
+    background-color: turquoise;
+    color: #111;
+    font-size: 1.1rem;
+}
+
+th:first-of-type {
+    border-top-left-radius: 5px;
+}
+
+th:last-of-type {
+    border-top-right-radius: 5px;
+}
+
+tbody tr:last-child td:first-of-type{
+    border-bottom-left-radius: 5px;
+}
+
+tbody tr:last-child td:last-of-type{
+    border-bottom-right-radius: 5px;
+}
+
+tbody tr:nth-child(even) {
+    background-color: skyblue;
+    color: #111;
+}
+
+tbody tr:nth-child(odd){
+    background-color: gold;
+    color: #111;
+}
+
+tbody tr:hover {
+    background-color: #111;
+    color: #fff;
+    transition: 200ms linear;
+}
+
 fieldset {
     max-width: 800px;
     margin: 0 auto;
     border: solid turquoise;
+    border-radius: 10px;
 }
 
 fieldset legend {
@@ -117,6 +167,17 @@ form button {
     width: 80px;
     height: 30px;
     margin: 0 auto;
+    background-color: transparent;
+    border: 2px solid turquoise;
+    color: #fff;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+form button:hover {
+    background-color: turquoise;
+    color: #111;
+    transition: 200ms linear;
 }
 
 footer {
