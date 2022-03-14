@@ -70,6 +70,7 @@ h1 {
 fieldset {
     max-width: 800px;
     margin: 0 auto;
+    border: solid turquoise;
 }
 
 fieldset legend {
