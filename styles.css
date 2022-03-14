@@ -67,6 +67,21 @@ h1 {
     margin-bottom: 1rem;
 }
 
+.responsive {
+    overflow-x: auto;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+table caption {
+    font-weight: bold;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
 fieldset {
     max-width: 800px;
     margin: 0 auto;
