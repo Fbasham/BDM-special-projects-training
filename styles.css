@@ -59,10 +59,43 @@ nav ul li a:hover{
     background-color: #222;
     color: turquoise;
     font-weight: bold;
+    transition: 300ms linear;
 }
 
 h1 {
     margin-bottom: 1rem;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.card {
+    border: 2px solid turquoise;
+    display: flex;
+    flex-direction: column;
+    box-shadow:  4px 4px 0 rgba(0,0,0,.2);
+    border-radius: 5px;
+}
+
+.card:hover {
+    box-shadow: 4px 4px 0;
+    transition: 200ms linear;
+}
+
+.card * {
+    margin-bottom: .5rem;
+}
+
+.card h2, .card p {
+    padding: 0 10px 0 10px;
+}
+
+.card img {
+    max-width: 100%;
+    height: auto;
 }
 
 .responsive {
@@ -74,6 +107,10 @@ h1 {
 table caption {
     font-weight: bold;
     text-align: left;
+    margin-bottom: 1rem;
+}
+
+p {
     margin-bottom: 1rem;
 }
 
@@ -94,7 +131,7 @@ td,th {
 thead tr{
     height: 3rem;
     text-align: left;
-    background-color: turquoise;
+    background-color:rgba(64,224,208,.85);
     color: #111;
     font-size: 1.1rem;
 }
@@ -116,12 +153,12 @@ tbody tr:last-child td:last-of-type{
 }
 
 tbody tr:nth-child(even) {
-    background-color: skyblue;
+    background-color: rgba(135,206,235,.85);
     color: #111;
 }
 
 tbody tr:nth-child(odd){
-    background-color: gold;
+    background-color: rgba(255,215,0,.85);
     color: #111;
 }
 
