@@ -243,6 +243,10 @@ form button:hover {
     margin-top: 3rem;
 }
 
+.modal h2 {
+    margin-bottom: 1rem;
+}
+
 .close {
     z-index: 200;
     cursor: pointer;
