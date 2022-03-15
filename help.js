@@ -13,7 +13,7 @@ submitBtn.addEventListener('click', e=>{
     let name = nameInput.value,
         email = emailInput.value,
         question = questionInput.value
-    emailInput.va
+        
     if ([name,email,question].some(e=>/^$/.test(e.trim()))){
         return
     }
