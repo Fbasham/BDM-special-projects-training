@@ -36,7 +36,9 @@ const beaches = [
 setTimeout(_=>{
   const grid = document.querySelector('.grid')
   const spinner = document.querySelector('.spinner')
-  beaches.forEach(e=>{
+
+  //shuffle to make it seem random and output to DOM
+  beaches.sort(_=>Math.random()-.5).forEach(e=>{
     grid.innerHTML += `
       <div class='card'>
         <img src='${e.img}' alt='${e.title}'>
@@ -45,5 +47,7 @@ setTimeout(_=>{
       </div>
     `
   })
+
   spinner.classList.add('hide')
+  
 }, 2000)

@@ -4,7 +4,6 @@ const nameInput = document.querySelector('#name')
 const emailInput = document.querySelector('#email')
 const questionInput = document.querySelector('#question')
 const cover = document.querySelector('.cover')
-const modal = document.querySelector('.modal')
 const receipt = document.querySelector('.receipt')
 const closeBtn = document.querySelector('.close')
 
