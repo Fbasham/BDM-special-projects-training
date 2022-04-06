@@ -248,16 +248,25 @@ form button:hover {
 }
 
 .close {
+    background-color: transparent;
+    border: none;
     z-index: 200;
+    color: #fff;
     cursor: pointer;
     position: absolute;
     top: 3rem;
     right: 26%;
     font-size: 1.5rem;
+    padding: 0 2.5px;
 }
 
 .close:hover {
     color: turquoise;
+}
+
+.close:focus {
+    outline: 2.5px solid turquoise;
+    border-radius: 2.5px;
 }
 
 .receipt {

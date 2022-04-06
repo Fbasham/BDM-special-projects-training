@@ -1,5 +1,5 @@
 const main = document.querySelector('main')
-const submitBtn = document.querySelector('button')
+const submitBtn = document.querySelector('[type=submit]')
 const nameInput = document.querySelector('#name')
 const emailInput = document.querySelector('#email')
 const questionInput = document.querySelector('#question')
@@ -26,6 +26,9 @@ submitBtn.addEventListener('click', e=>{
     `
     cover.classList.toggle('hide')
     main.style.opacity = .2
+    closeBtn.focus()
+
+    recursiveSetTabIndex(main,-1)
 })
 
 closeBtn.addEventListener('click', e=>{
@@ -35,4 +38,11 @@ closeBtn.addEventListener('click', e=>{
     nameInput.value = ''
     emailInput.value = ''
     questionInput.value = ''
+
+    recursiveSetTabIndex(main,0)
 })
+
+function recursiveSetTabIndex(elem,n){
+    elem.tabIndex = n
+    if (elem.children.length) [...elem.children].forEach(e=>recursiveSetTabIndex(e,n))
+}
