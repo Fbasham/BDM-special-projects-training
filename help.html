@@ -9,6 +9,11 @@
     <script src="help.js" defer></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Help</title>
+    <style>
+        footer {
+            font-size: .9rem;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -25,27 +30,28 @@
         </nav>
     </header>
     <div class="cover hide">
-        <button class="close">&times;</button>
-        <div class="modal">
-            <h2>Success</h2>
+        <div role='dialog' class="modal" aria-modal="true" aria-labelledby="success">
+            <button class="close" aria-label="close">&times;</button>
+            <h2 class="success">Success</h2>
             <p>Thank you for your question.  One of our customer support agents will be in touch with you as soon as possible with answers to your questions.</p>
             <div class="receipt"></div>
         </div>
     </div>
     <main>
         <h1>Help</h1>
-        <fieldset>
+        <form>
+            <fieldset>
             <legend>Ask us</legend>
-            <form>
-                <label for="name">Name</label>
+            <p>All fields marked with an asterix are required.</p>
+                <label for="name">Name *</label>
                 <input type="text" name="name" id="name" required>
-                <label for="email">Email</label>
+                <label for="email">Email *</label>
                 <input type="email" name="email" id="email" required>
-                <label for="question">Question</label>
+                <label for="question">Question *</label>
                 <textarea name="question" id="question" required></textarea>
                 <button type="submit">Submit</button>
-            </form>
-        </fieldset>
+            </fieldset>
+        </form>
     </main>
     <footer>&copy; 2022 Frank Basham</footer>
 </body>

@@ -1,3 +1,4 @@
+const header = document.querySelector('header')
 const main = document.querySelector('main')
 const submitBtn = document.querySelector('[type=submit]')
 const nameInput = document.querySelector('#name')
@@ -6,6 +7,7 @@ const questionInput = document.querySelector('#question')
 const cover = document.querySelector('.cover')
 const receipt = document.querySelector('.receipt')
 const closeBtn = document.querySelector('.close')
+
 
 submitBtn.addEventListener('click', e=>{
     e.preventDefault()
@@ -28,6 +30,7 @@ submitBtn.addEventListener('click', e=>{
     main.style.opacity = .2
     closeBtn.focus()
 
+    recursiveSetTabIndex(header,-1)
     recursiveSetTabIndex(main,-1)
 })
 
@@ -39,10 +42,12 @@ closeBtn.addEventListener('click', e=>{
     emailInput.value = ''
     questionInput.value = ''
 
-    recursiveSetTabIndex(main,0)
+    recursiveSetTabIndex(header,0,true)
+    recursiveSetTabIndex(main,0,true)
 })
 
-function recursiveSetTabIndex(elem,n){
-    elem.tabIndex = n
-    if (elem.children.length) [...elem.children].forEach(e=>recursiveSetTabIndex(e,n))
+function recursiveSetTabIndex(elem,n,remove=false){
+    if (remove) elem.removeAttribute('tabindex')
+    else elem.tabIndex = n
+    if (elem.children.length) [...elem.children].forEach(e=>recursiveSetTabIndex(e,n,remove))
 }
