@@ -28,7 +28,7 @@ submitBtn.addEventListener('click', e=>{
     `
     cover.classList.toggle('hide')
     main.style.opacity = .2
-    // closeBtn.focus()
+    closeBtn.focus()
 
     recursiveSetTabIndex(header,-1)
     recursiveSetTabIndex(main,-1)
