@@ -174,7 +174,7 @@ tbody tr:hover {
     transition: 200ms linear;
 }
 
-fieldset {
+form {
     display: flex;
     flex-direction: column;
     max-width: 800px;
@@ -182,12 +182,6 @@ fieldset {
     border: solid turquoise;
     border-radius: 10px;
     padding: 1rem;
-}
-
-fieldset legend {
-    margin-left: 1rem;
-    font-size: 1.2rem;
-    font-weight: bold;
 }
 
 form label {
